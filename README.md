@@ -1,5 +1,5 @@
-# Make your website with R Markdown in minutes
-Aarons Page
+# Aarons Page
+
 
 ## headline
 Hi, welcome everyone this is my new page! 
