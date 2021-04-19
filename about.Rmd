@@ -1,0 +1,12 @@
+---
+title: "About me"
+---
+
+## Header
+
+My name is Aaron, i'm based in Austria and i develop buisness applications for SAP, 
+also doing administration of SAP-Systems.
+
+In my free-time i use it to participate in some web- or mobile projects.
+(JS-stuff like react, react-native, angular, all with node.js, also other stuff with php...)
+

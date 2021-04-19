@@ -1,0 +1,26 @@
+name: "Aaron Info-Page"                                # CHANGE HERE 
+output_dir: "."
+navbar:
+  title: "Aaron Leimhofer"                             # CHANGE HERE 
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About"
+      icon: fa-user 
+      href: about.html
+    - text: "CV"
+      icon: fa-file-pdf-o
+      href: cv.html
+  right:
+    - text: "Contact me"
+      icon: fa-envelope-o
+      href: mailto:aaron.leim@protonmail.com                    # CHANGE HERE 
+    - text: "GitHub"
+      icon: fa-github
+      href: https://github.com/aaleiron.github.io      # CHANGE HERE 
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
