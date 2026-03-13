@@ -12,7 +12,7 @@ const translations = {
       langLabel: 'Sprache',
       langDe: 'DE',
       langEn: 'EN',
-      footerName: 'Dein Name'
+      footerName: 'AaLeiRon IT Consulting'
     },
     en: {
       htmlLang: 'en',
@@ -23,7 +23,7 @@ const translations = {
       langLabel: 'Language',
       langDe: 'DE',
       langEn: 'EN',
-      footerName: 'Your Name'
+      footerName: 'AaLeiRon IT Consulting.'
     }
   },
   'index.html': {
