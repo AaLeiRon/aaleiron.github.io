@@ -1,175 +1,49 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | IT-Beratung</title>
-  <meta name="description" content="Persönlicher Blog zu SAP, Cloud, AI Architecture, strategischer IT und modernen Beratungsansätzen." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Aaron</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"></span>
-        <span>
-          <strong>IT Consulting</strong><br>
-          <small>AI • SAP • Cloud</small>
-        </span>
-      </a>
-      <nav class="nav-links" data-nav-links>
-        <a href="index.html">Start</a>
-        <a href="projects.html">Projekte</a>
-        <a class="active" href="blog.html">Blog</a>
-        <a href="about.html">Über mich</a>
+  <div class="page-shell">
+    <header class="site-header glass">
+      <a class="brand" href="index.html">AaLeiRon IT Consulting</a>
+      <nav class="site-nav">
+        <a href="projects.html" data-text="nav.projects">Projects</a>
+        <a href="blog.html" data-text="nav.blog">Blog</a>
+        <a href="about.html" data-text="nav.about">About</a>
+        <a href="contact.html" data-text="nav.contact">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" data-nav-toggle>☰</button>
-    </div>
-  </header>
+      <div class="header-actions">
+        <button class="lang-btn" data-lang-switch="de">DE</button>
+        <button class="lang-btn" data-lang-switch="en">EN</button>
+      </div>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="container two-col">
-        <div>
-          <div class="kicker reveal"><span class="kicker-dot"></span> Persönlicher Blog mit Social-Verknüpfung</div>
-          <h1 class="reveal">Gedanken, Erfahrungen und Perspektiven aus <span class="gradient-text">SAP, AI und Cloud</span>.</h1>
-          <p class="reveal">Hier kannst du regelmäßig Artikel veröffentlichen, deine Sicht auf technologische Entwicklungen teilen und deine Expertise sichtbar ausbauen.</p>
-          <div class="social-row reveal">
-            <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn Profil verknüpfen</a>
-            <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram verknüpfen</a>
-          </div>
+    <main class="page-main">
+      <section class="section reveal">
+        <div class="page-intro">
+          <p class="eyebrow" data-text="blog.eyebrow">Blog</p>
+          <h1 data-text="blog.title"></h1>
+          <p class="lead" data-text="blog.intro"></p>
         </div>
-        <div class="panel reveal">
-          <div class="eyebrow">Redaktioneller Nutzen</div>
-          <h3>Content macht Kompetenz langfristig sichtbar.</h3>
-          <p>Mit Fachartikeln zu Architektur, Trends, Best Practices und Lessons Learned baust du Vertrauen auf, stärkst deine persönliche Marke und erzeugst kontinuierliche Relevanz am Markt.</p>
-          <input class="search-input" type="search" placeholder="Artikel durchsuchen…" aria-label="Artikel durchsuchen" data-blog-search>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="container">
-        <div class="blog-grid">
-          <article class="panel reveal" id="article-stakeholder">
-          <div class="eyebrow">Blog-Entry 01</div>
-          <h2>My Book: </h2>
-           <p>What if the best way to understand AI wasn't to read about it — but to build it yourself?
-Agentolus is the story of one developer's hands-on journey into the world of agentic AI — not through polished frameworks or off-the-shelf solutions, but from the ground up. Driven by a simple belief that true understanding only comes from building, this book documents every decision, dead end, and breakthrough along the way.
-From a central orchestrating agent to a team of Docker-containerized specialists running entirely on local LLMs, Agentolus is both a technical blueprint and a personal manifesto. It shows that you don't need a research lab or a cloud budget to explore the frontier of AI — you need curiosity, persistence, and the willingness to get your hands dirty.
-Whether you're a developer tired of using tools you don't truly understand, or simply someone fascinated by where AI is heading, this book will challenge you to stop watching from the sidelines and start building.Because the best way to learn is to make something real..</p>
+      <section class="section reveal">
+        <div class="cards cards-3" id="blog-list"></div>
+      </section>
 
-        </article>
+    </main>
 
-          <article class="blog-card reveal" data-article>
-            <div class="blog-top">
-              <div>
-                <div class="eyebrow">Featured Article</div>
-                <h3>Warum Agentic Architecture mehr ist als nur ein AI-Trend</h3>
-              </div>
-            </div>
-            <div class="blog-meta">
-              <span>AI Strategy</span>
-              <span>Enterprise Architecture</span>
-              <span>8 Min. Lesezeit</span>
-            </div>
-            <p>Agentische Systeme entfalten erst dann echten Nutzen, wenn sie in Architekturprinzipien, Verantwortlichkeiten und Governance eingebettet werden. Der Artikel zeigt, wie aus Hype eine belastbare Unternehmenslösung wird.</p>
-            <a class="card-link" href="#article-agentic">Artikel lesen
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-          <article class="blog-card reveal" data-article>
-            <div class="blog-top">
-              <div>
-                <div class="eyebrow">Article</div>
-                <h3>SAP BTP als Enabler für moderne Erweiterungs- und AI-Szenarien</h3>
-              </div>
-            </div>
-            <div class="blog-meta">
-              <span>SAP BTP</span>
-              <span>Cloud</span>
-              <span>6 Min. Lesezeit</span>
-            </div>
-            <p>Ein kompakter Blick darauf, wie Unternehmen SAP BTP nicht nur als Plattform, sondern als strategischen Innovationshebel für Erweiterbarkeit, Integration und AI-nahe Lösungen verstehen können.</p>
-            <a class="card-link" href="#article-btp">Artikel lesen
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-          <article class="blog-card reveal" data-article>
-            <div class="blog-top">
-              <div>
-                <div class="eyebrow">Article</div>
-                <h3>Stakeholder-Management in Tech-Projekten: unterschätzt, aber entscheidend</h3>
-              </div>
-            </div>
-            <div class="blog-meta">
-              <span>Leadership</span>
-              <span>Strategy</span>
-              <span>5 Min. Lesezeit</span>
-            </div>
-            <p>Technisch gute Lösungen scheitern selten am Stack, aber häufig an fehlender Einbettung, Kommunikation und Erwartungssteuerung. Dieser Beitrag zeigt einen pragmatischen Beratungsblick auf das Thema.</p>
-            <a class="card-link" href="#article-stakeholder">Artikel lesen
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-        </div>
-        <div class="empty-state" data-empty-state>Keine Artikel gefunden. Passe den Suchbegriff an oder füge neue Beiträge hinzu.</div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container article-content">
-        <article class="panel reveal" id="article-agentic">
-          <div class="eyebrow">Beispielartikel 01</div>
-          <h2>Warum Agentic Architecture mehr ist als nur ein AI-Trend</h2>
-          <div class="inline-meta">
-            <span>Veröffentlicht im Blog</span>
-            <span>Architektur & Strategie</span>
-          </div>
-          <p>Viele Diskussionen über AI fokussieren sich stark auf Modelle und Prompting. Für Unternehmen ist jedoch entscheidend, wie daraus belastbare Systeme entstehen. Agentic Architecture beschreibt eine Denkweise, in der autonome oder teilautonome Einheiten mit Rollen, Zielen, Werkzeugen und Kontrollmechanismen gestaltet werden.</p>
-          <p>Der Mehrwert entsteht nicht allein durch Automatisierung, sondern durch die bewusste Kombination aus Entscheidungslogik, Datenzugriff, Compliance, Observability und Prozessintegration. Genau an dieser Stelle wird Architektur zum Erfolgsfaktor.</p>
-        </article>
-
-        <article class="panel reveal" id="article-btp">
-          <div class="eyebrow">Beispielartikel 02</div>
-          <h2>SAP BTP als Enabler für moderne Erweiterungs- und AI-Szenarien</h2>
-          <p>SAP BTP ist besonders stark, wenn Plattformstrategie, Integrationsfähigkeit und Erweiterbarkeit zusammengedacht werden. In einer modernen Architektur kann die Plattform als Brücke zwischen SAP-Core, individuellen Anwendungen und neuen AI-nahen Services dienen.</p>
-          <ul>
-            <li>Saubere Erweiterung bestehender SAP-Lösungen</li>
-            <li>Integration von Daten, Prozessen und Services</li>
-            <li>Strukturierte Grundlage für zukünftige AI- und Automatisierungsszenarien</li>
-          </ul>
-        </article>
-
-        <article class="panel reveal" id="article-stakeholder">
-          <div class="eyebrow">Beispielartikel 03</div>
-          <h2>Stakeholder-Management in Tech-Projekten: unterschätzt, aber entscheidend</h2>
-          <p>Komplexe IT-Projekte sind nie rein technisch. Unterschiedliche Erwartungshaltungen, Prioritäten und Kommunikationsstile beeinflussen Entscheidungen ebenso stark wie der Techstack. Wer Stakeholder ernsthaft managt, reduziert Reibung, verbessert Timing und erhöht die Akzeptanz technischer Lösungen erheblich.</p>
-          <p>Für selbstständige Berater ist das ein klarer Differenzierungsfaktor: Technik mit Klarheit übersetzen, Entscheidungsfähigkeit fördern und Vertrauen durch nachvollziehbare Kommunikation schaffen.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-box">
-      <div>
-        <strong>Blog & Personal Brand</strong>
-        <p>Ideal, um regelmäßig Expertise, Perspektiven und Persönlichkeit zu zeigen.</p>
-      </div>
-      <div class="social-links">
-        <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-      </div>
-      <small>© <span data-year></span> AaLeiRon IT Consulting.</small>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <footer class="site-footer"><p>© 2026 AaLeiRon IT Consulting</p></footer>
+  </div>
+  <script src="js/content.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

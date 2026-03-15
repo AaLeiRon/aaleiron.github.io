@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Blog Post</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header glass">
+      <a class="brand" href="../index.html">AaLeiRon IT Consulting</a>
+      <nav class="site-nav">
+        <a href="../projects.html">Projects</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <article class="blog-article reveal">
+        <p class="eyebrow">Blog</p>
+        <h1>My Book: Agentolus - Building an Agentic Framework from scratch</h1>
+        <p class="meta">20 March 2026 · 5 min read</p>
+        <p>Get it here: Kindle-Link</p>
+        <h2>Description</h2>
+        <p>What if the best way to understand AI wasn't to read about it — but to build it yourself?
+Agentolus is the story of one developer's hands-on journey into the world of agentic AI — not through polished frameworks or off-the-shelf solutions, but from the ground up. Driven by a simple belief that true understanding only comes from building, this book documents every decision, dead end, and breakthrough along the way.
+From a central orchestrating agent to a team of Docker-containerized specialists running entirely on local LLMs, Agentolus is both a technical blueprint and a personal manifesto. It shows that you don't need a research lab or a cloud budget to explore the frontier of AI — you need curiosity, persistence, and the willingness to get your hands dirty.
+Whether you're a developer tired of using tools you don't truly understand, or simply someone fascinated by where AI is heading, this book will challenge you to stop watching from the sidelines and start building.Because the best way to learn is to make something real..</p>
+       <h2>Book Overview</h2>
+<p>
+This book takes you from zero to a fully functional agentic AI framework called Agentolus. Each chapter introduces a concept, explains the theory, and guides you through implementing it step by step. The tech stack is deliberately local-first: Ollama is used for LLM inference, Docker provides isolation for agents, and a central orchestrator coordinates all interactions. By the end of the book, you will have built a working multi-agent system and—more importantly—developed a deep understanding of how agentic AI systems operate internally.
+</p>
+
+<h2>Architecture at a Glance</h2>
+<p>
+Agentolus follows a hub-and-spoke architecture. At the center sits the Orchestrator Agent, an LLM-powered controller responsible for receiving user requests, decomposing them into smaller subtasks, and delegating these subtasks to the appropriate Specialized Agents. Each specialized agent operates inside its own Docker container with clearly defined capabilities and resource limits. Communication between agents happens through a standardized message protocol, while a shared memory layer allows the system to maintain context and continuity across interactions.
+</p>
+
+<h2>Tech Stack</h2>
+<p>
+Agentolus is built on a modern, modular technology stack designed for local execution and reproducibility. Ollama provides the local large language model inference engine supporting models such as Llama, Mistral, Qwen, DeepSeek, Phi, and Gemma. Docker acts as the container runtime to isolate agents, ensure reproducibility, and enforce security boundaries. Python serves as the primary programming language for agent logic, orchestration, and tool development. Flask combined with httpx enables a REST API layer for communication between agents and supports server-sent event streaming. SQLite and ChromaDB provide persistent storage for conversation history and semantic search capabilities. Pydantic is used for schema validation to ensure that every message exchanged between system components conforms to a strict structure. SearXNG provides a self-hosted meta-search engine used by the Research Agent, while MCP (Model Context Protocol) allows standardized integration of tools into the agent ecosystem.
+</p>
+
+<h2>Who This Book Is For</h2>
+<p>
+This book is intended for software developers, machine learning engineers, IT professionals, technical architects, and everyone who want to understand agentic AI beyond the current hype and learn how to build real working systems. Readers should be comfortable with Python programming, have basic familiarity with Docker concepts, and be curious about how large language models can be transformed into autonomous problem-solving agents. No previous experience with agentic frameworks is required, as the book guides readers through each concept step by step.
+</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

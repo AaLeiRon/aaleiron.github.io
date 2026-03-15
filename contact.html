@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Aaron</title>
+  <title>Contact | Aaron</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,34 +29,33 @@
     <main class="page-main">
       <section class="section reveal">
         <div class="page-intro">
-          <p class="eyebrow" data-text="about.eyebrow">About</p>
-          <h1 data-text="about.title"></h1>
-          <p class="lead" data-text="about.intro"></p>
+          <p class="eyebrow" data-text="contact.eyebrow">Contact</p>
+          <h1 data-text="contact.title"></h1>
+          <p class="lead" data-text="contact.intro"></p>
         </div>
       </section>
 
       <section class="section reveal two-col">
         <div class="glass panel">
-          <h2 data-text="about.storyTitle">My profile</h2>
-          <p data-text="about.storyText"></p>
+          <h2 data-text="contact.detailsTitle">Direct contact</h2>
+          <p data-text="contact.detailsText"></p>
+          <div class="contact-links">
+            <a href="mailto:you@example.com">you@example.com</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
         </div>
-        <div class="glass panel">
-          <h2 data-text="about.motivationTitle">What drives me</h2>
-          <p data-text="about.motivationText"></p>
-        </div>
-      </section>
-      <section class="section reveal">
-        <div class="section-head"><h2 data-text="about.skillsTitle">Core skills</h2></div>
-        <div class="cards cards-4" id="about-skills"></div>
-      </section>
-      <section class="section reveal">
-        <div class="section-head"><h2 data-text="about.interestsTitle">Interests and hobbies</h2></div>
-        <div class="cards cards-4" id="about-interests"></div>
+        <form class="contact-form glass panel" action="https://formspree.io/f/yourid" method="POST">
+          <label><span data-text="contact.formName">Name</span><input type="text" name="name" placeholder="Name" required></label>
+          <label><span data-text="contact.formEmail">Email</span><input type="email" name="email" placeholder="Email" required></label>
+          <label><span data-text="contact.formMessage">Message</span><textarea name="message" rows="7" placeholder="Message" required></textarea></label>
+          <button class="btn btn-primary" type="submit" data-text="contact.formButton">Send message</button>
+        </form>
       </section>
 
     </main>
 
-    <footer class="site-footer"><p>© 2026 AaLeiRon IT Consulting</p></footer>
+    <footer class="site-footer"><p>© 2026 Aaron</p></footer>
   </div>
   <script src="js/content.js"></script>
   <script src="js/site.js"></script>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Blog Post</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header glass">
+      <a class="brand" href="../index.html">Aaleiron</a>
+      <nav class="site-nav">
+        <a href="../projects.html">Projects</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <article class="blog-article reveal">
+        <p class="eyebrow">Blog</p>
+        <h1>Agentic AI Frameworks on SAP BTP: Architecture, Tech Stack, and Security Considerations</h1>
+        <p class="meta">15 March 2026 · 10 min read</p>
+        <h2>Abstract</h2>
+<p>
+Agentic AI frameworks—systems that enable AI models to autonomously plan and execute tasks—are rapidly moving from experimental prototypes to enterprise deployments. Platforms such as SAP Business Technology Platform (BTP) are increasingly used as execution environments for AI agents integrated with enterprise workflows. This article summarizes how open agent frameworks such as LangChain, CrewAI, and AutoGen behave when deployed in SAP BTP environments developed with SAP Business Application Studio (BAS). It outlines the required technology stack, architectural patterns, and security considerations required to operate agentic systems in enterprise SAP landscapes.
+</p>
+<h2>From Copilots to Autonomous Agents in Enterprise Platforms</h2>
+<p>
+Agentic AI represents a shift from passive AI assistants toward systems that can plan goals, invoke tools, and autonomously execute workflows across enterprise systems. Unlike traditional automation systems, agentic frameworks allow large language models to reason about tasks and dynamically orchestrate services, APIs, and enterprise data sources. Within enterprise ecosystems such as SAP, this capability enables AI systems to support or automate business processes such as procurement analysis, forecasting, or data extraction. SAP Business Technology Platform provides an environment where such agents can be integrated directly into enterprise workflows while maintaining governance and operational control.
+</p>
+<h2>Development Environment: SAP Business Application Studio</h2>
+<p>
+SAP Business Application Studio (BAS) is the primary cloud-based development environment for SAP BTP applications. It provides containerized development workspaces optimized for SAP technologies including the Cloud Application Programming Model (CAP), Fiori development, and service integrations. Agentic frameworks can be integrated into BAS projects using Node.js or Python environments where AI frameworks such as LangChain or AutoGen are installed as dependencies. Developers typically build microservices or API layers that expose enterprise functionality, allowing AI agents to invoke SAP services through structured APIs. BAS also integrates with Git repositories and CI/CD pipelines, enabling continuous delivery of AI-enabled applications deployed to SAP BTP runtimes.
+</p>
+<h2>Architecture: Running Agentic Frameworks on SAP BTP</h2>
+<p>
+The architecture of agentic AI applications on SAP BTP generally follows a layered model. At the development layer, applications are built in SAP Business Application Studio and version-controlled in Git repositories. The application layer typically consists of Node.js or Java microservices built using the Cloud Application Programming Model. These services embed agent orchestration frameworks responsible for managing prompts, memory, and tool invocation. The AI model layer integrates with SAP AI Core and the Generative AI Hub, which provide access to large language models and lifecycle management. Data access is provided through SAP HANA Cloud or other enterprise systems. Finally, runtime execution occurs on SAP BTP infrastructure such as Cloud Foundry or the Kubernetes-based Kyma runtime. This layered architecture enables scalable deployment of AI agents while maintaining integration with enterprise systems.
+</p>
+<h2>Required Technology Stack</h2>
+<p>
+Deploying agentic frameworks in SAP BTP environments requires a multi-layer technology stack. Development typically occurs in SAP Business Application Studio using Node.js or Java with the SAP Cloud Application Programming Model. Agent orchestration frameworks such as LangChain, LangGraph, CrewAI, or Microsoft AutoGen provide the logic for planning tasks and invoking tools. SAP AI Core and the Generative AI Hub serve as the model orchestration and lifecycle management layer for AI services. Data persistence is usually implemented using SAP HANA Cloud, which may also store vector embeddings for retrieval-augmented generation scenarios. The runtime environment is provided by SAP BTP infrastructure such as Cloud Foundry or Kyma, which allow containerized workloads and scalable microservice deployments.
+</p>
+<h2>Behavior of Agentic Frameworks in SAP Environments</h2>
+<p>
+Agentic frameworks differ from traditional enterprise applications because they operate through iterative reasoning loops and tool orchestration. When deployed in SAP BTP, an agent typically receives a high-level objective and decomposes it into a sequence of tasks. These tasks may involve retrieving enterprise data, invoking APIs, performing reasoning using large language models, and writing results back to business systems. Many frameworks support multi-agent collaboration, where different agents specialize in planning, execution, and validation. Agents may also maintain persistent context using vector databases or application memory stores. This behavior enables dynamic automation of business workflows while still operating within the architectural boundaries defined by SAP BTP services.
+</p>
+<h2>Security Challenges of Agentic AI in Enterprise Systems</h2>
+<p>
+The deployment of autonomous AI agents introduces new security challenges that differ from traditional application security models. Agentic systems dynamically generate actions, interact with external tools, and maintain internal state over time. This creates potential vulnerabilities such as prompt injection, goal hijacking, tool misuse, or data leakage through retrieval systems. Because agents may have access to enterprise APIs and business data, improper access control could allow unintended operations or data exposure. These challenges require additional security layers beyond standard cloud application protections, including stricter governance of tool access, monitoring of agent behavior, and validation of model outputs.
+</p>
+<h2>Required Security Measures for SAP BTP Agent Deployments</h2>
+<p>
+Secure deployment of agentic frameworks on SAP BTP requires a layered security architecture. Identity and access management should be implemented using SAP Identity Authentication Service and OAuth-based authorization mechanisms to ensure that agents only access permitted resources. API access should be mediated through service accounts with least-privilege permissions, preventing unrestricted interaction with enterprise services. Data access layers must enforce strict policies to protect business data and prevent retrieval manipulation. Runtime environments should use container isolation and network segmentation, particularly when deploying agents on Kubernetes-based Kyma environments. In addition, organizations should implement monitoring and logging systems to track agent actions, enabling detection of anomalous behavior and supporting incident response procedures.
+</p>
+<h2>Enterprise Deployment Best Practices</h2>
+<p>
+Organizations adopting agentic frameworks in SAP environments should follow several architectural and operational best practices. Zero-trust security models should be applied to ensure that every interaction between agents, APIs, and data systems is authenticated and authorized. Agents should operate with minimal privileges and should be restricted to specific tools required for their tasks. Human-in-the-loop governance should be used for high-impact operations such as financial transactions or system configuration changes. Continuous monitoring and testing of agent behavior should be implemented to identify potential vulnerabilities, including prompt injection and adversarial manipulation. By combining these practices with SAP BTP governance tools, organizations can maintain secure and reliable AI-driven automation.
+</p>
+<h2>Conclusion</h2>
+<p>
+Agentic AI frameworks represent an emerging paradigm for enterprise automation. When deployed within SAP Business Technology Platform, these frameworks can integrate advanced AI reasoning capabilities directly into business workflows while benefiting from enterprise-grade infrastructure and governance. However, successful adoption requires careful architectural design, integration with SAP AI services, and robust security controls to manage the autonomy of AI agents. With proper governance and secure deployment practices, SAP BTP provides a scalable platform for implementing agent-based AI systems that enhance enterprise productivity and decision-making.
+</p>
+<h2>Sources</h2>
+<ul>
+
+<li>
+<a href="https://www.sap.com/products/technology-platform/ai.html">
+SAP – AI on SAP Business Technology Platform
+</a>
+</li>
+
+<li>
+<a href="https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/generative-ai-hub-in-sap-ai-core">
+SAP Help Portal – Generative AI Hub in SAP AI Core
+</a>
+</li>
+
+<li>
+<a href="https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/what-is-sap-ai-core">
+SAP Help Portal – What is SAP AI Core
+</a>
+</li>
+
+<li>
+<a href="https://discovery-center.cloud.sap/missiondetail/4403/4689/">
+SAP Discovery Center – SAP AI Core and Generative AI Hub Mission
+</a>
+</li>
+
+<li>
+<a href="https://developers.sap.com/">
+SAP Developers Portal
+</a>
+</li>
+
+<li>
+<a href="https://community.sap.com/t5/technology-blog-posts-by-sap/developing-running-and-monitoring-langchain-applications-on-sap-btp/ba-p/13988466">
+SAP Community – Developing, Running and Monitoring LangChain Applications on SAP BTP
+</a>
+</li>
+
+<li>
+<a href="https://community.sap.com/t5/technology-blog-posts-by-sap/how-to-integrate-sap-ai-core-with-langchain-using-generative-ai-hub-sdk/ba-p/14233467">
+SAP Community – Integrating SAP AI Core with LangChain Using Generative AI Hub SDK
+</a>
+</li>
+
+<li>
+<a href="https://community.sap.com/t5/technology-blog-posts-by-sap/building-an-agentic-ai-system-with-sap-generative-ai-hub/ba-p/14078187">
+SAP Community – Building an Agentic AI System with SAP Generative AI Hub
+</a>
+</li>
+
+<li>
+<a href="https://community.sap.com/t5/technology-blog-posts-by-sap/securing-sap-business-ai-a-multi-layer-architecture-for-enterprise-trust/ba-p/14305070">
+SAP Community – Securing SAP Business AI: A Multi-Layer Architecture for Enterprise Trust
+</a>
+</li>
+
+<li>
+<a href="https://community.sap.com/t5/technology-blog-posts-by-sap/orchestrate-your-generative-ai-workflows-through-the-sap-generative-ai-hub/ba-p/13978850">
+SAP Community – Orchestrate Generative AI Workflows Through SAP Generative AI Hub
+</a>
+</li>
+
+<li>
+<a href="https://github.com/SAP-samples/btp-cap-genai-rag">
+GitHub – SAP Samples: BTP CAP GenAI RAG Example
+</a>
+</li>
+
+<li>
+<a href="https://medium.com/sap-innovation-hub/technical-architecture-of-sap-gen-ai-943133b30d9a">
+SAP Innovation Hub – Technical Architecture of SAP Generative AI
+</a>
+</li>
+
+<li>
+<a href="https://docs.aws.amazon.com/sap/latest/general/rise-jra-ai.html">
+AWS Documentation – SAP AI Core with Generative AI Hub
+</a>
+</li>
+
+<li>
+<a href="https://docs.langchain.com/oss/python/integrations/providers/sap">
+LangChain Documentation – SAP Integrations
+</a>
+</li>
+
+<li>
+<a href="https://developers.sap.com/tutorials/ai-core-genaihub-provisioning..html">
+SAP Developers Tutorial – Provisioning Generative AI Hub
+</a>
+</li>
+
+<li>
+<a href="https://arxiv.org/abs/2504.21034">
+Syros et al. – SAGA: A Security Architecture for Governing Agentic Systems (2025)
+</a>
+</li>
+
+<li>
+<a href="https://arxiv.org/abs/2602.10465">
+Rajagopalan & Rao – Authenticated Workflows: Protecting Agentic AI (2026)
+</a>
+</li>
+
+<li>
+<a href="https://arxiv.org/abs/2510.25863">
+Huang et al. – AAGATE: Governance Platform for Agentic AI (2025)
+</a>
+</li>
+
+<li>
+<a href="https://arxiv.org/abs/2510.10675">
+Panchal – Simpliflow: Agentic AI Workflow Framework (2025)
+</a>
+</li>
+
+</ul>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
